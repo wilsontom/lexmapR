@@ -14,9 +14,17 @@
 
             image_list <- data.frame(docker_env$image$list())
 
+            len_check <- purrr::map_dbl(image_list$repo_tags, length) == 0
+
+            if(any(len_check) == 'TRUE') {
+                idx_zero <- which(len_check == TRUE)
+                image_list$repo_tags[idx_zero][[1]] <- 'none'
+            }
+
+
             if (TRUE %in%
                 stringr::str_detect(image_list$repo_tags,
-                                    'wilsontom/lexmapr-docker')) {
+                                    'wilsontom/lexmapr-docker', negate = FALSE)) {
                 message(crayon::green(
                     crayon::bold(
                         clisymbols::symbol$tick,
