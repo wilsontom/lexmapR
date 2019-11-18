@@ -1,0 +1,20 @@
+Package: lexmapR
+Type: Package
+Title: Map terms to the FoodOn ontology
+Version: 0.1.0
+Authors@R: c(
+    person("Tom", "Wilson", , "tpw2@aber.ac.uk", c("aut", "cre"),  comment = c(ORCID = "0000-0003-3112-4682")))
+Description: Map food terms to the FoodOn ontology using the LexMapr tool (https://github.com/Public-Health-Bioinformatics/LexMapr). lexmapR invokes a system command to run LexMapr in a docker container (https: //github.com/wilsontom/lexmapr-docker).
+Imports:
+    tibble,
+    jsonlite,
+    rjson,
+    readr,
+    stevedore,
+    crayon,
+    clisymbols,
+    stringr
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
