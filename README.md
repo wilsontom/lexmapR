@@ -1,7 +1,9 @@
 # lexmapR
 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Build Status](https://travis-ci.org/wilsontom/lexmapR.svg?branch=master)](https://travis-ci.org/wilsontom/lexmapR) [![Build status](https://ci.appveyor.com/api/projects/status/ap6ks2torlgf2nnk/branch/master?svg=true)](https://ci.appveyor.com/project/wilsontom/lexmapr/branch/master) ![License](https://img.shields.io/badge/license-GNU%20GPL%20v3.0-blue.svg "GNU GPL v3.0")
 
-R Interface to LexMapr (via docker)
+
+**R Interface to LexMapr (via docker)**
 
 lexmapR is a R interafce to the python tool [Lexmapr](https://github.com/Public-Health-Bioinformatics/LexMapr). **LexMapr** is a _Lexicon and Rule-Based Tool for Translating Short Biomedical Specimen Descriptions into Semantic Web Ontology Terms_. 
 
