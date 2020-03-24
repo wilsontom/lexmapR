@@ -45,7 +45,7 @@
                         'Pulling container from docker hub'
                     )
                 ))
-                docker_env$image$pull('wilsontom/lexmapr')
+                docker_env$image$pull('wilsontom/lexmapr-docker')
             }
 
         }
