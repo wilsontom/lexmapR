@@ -13,7 +13,9 @@ Imports:
     stevedore,
     crayon,
     clisymbols,
-    stringr
+    stringr,
+    uuid,
+    purrr
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
