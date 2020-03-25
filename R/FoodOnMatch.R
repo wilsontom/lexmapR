@@ -27,9 +27,17 @@ FoodOnMatch <- function(food_terms, onto_terms)
 
     mount_path <- paste0(getwd(), '/', getOption('TEMPDIR'))
 
-    docker_cmd <- paste0('docker run --name lexmapR -v ',
-                         mount_path,
-                         ':/data wilsontom/lexmapr-docker')
+    container_nane <- uuid::UUIDgenerate()
+    container_nane_sp <- strsplit(container_nane, '-')[[1]][1]
+
+    docker_cmd <-
+        paste0(
+            'docker run --name ',
+            container_nane_sp,
+            ' -v ',
+            mount_path,
+            ':/data wilsontom/lexmapr-docker'
+        )
 
     system(docker_cmd, intern = FALSE)
 
@@ -70,6 +78,11 @@ FoodOnMatch <- function(food_terms, onto_terms)
         file.remove(tempfiles[i])
     }
     file.remove(getOption('TEMPDIR'))
+
+    # remove docker container
+    docker_container_remove <- paste0('docker rm ', container_nane_sp)
+
+    system(docker_container_remove, intern = FALSE)
 
     return(cleaned_up_tibble)
 
