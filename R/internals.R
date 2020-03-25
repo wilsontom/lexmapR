@@ -51,3 +51,47 @@ create_input <- function(food_terms)
 
 }
 
+#' Check for docker image
+#'
+#' Check if the lexmapr-dokcer image is available
+
+check_image <- function()
+{
+    docker_env <-
+        stevedore::docker_client(api_version = 1.39, quiet = TRUE)
+
+    image_list <- data.frame(docker_env$image$list())
+
+    len_check <- purrr::map_dbl(image_list$repo_tags, length) == 0
+
+    if (any(len_check) == 'TRUE') {
+        idx_zero <- which(len_check == TRUE)
+        image_list$repo_tags[idx_zero][[1]] <- 'none'
+    }
+
+    if (TRUE %in%
+        stringr::str_detect(image_list$repo_tags,
+                            'wilsontom/lexmapr-docker',
+                            negate = FALSE)) {
+        message(crayon::green(
+            crayon::bold(clisymbols::symbol$tick,
+                         'lexmapr container found')
+        ))
+    } else{
+        message(crayon::red(
+            crayon::bold(
+                clisymbols::symbol$cross,
+                'lexmapr container not found'
+            )
+        ))
+        cat('\n')
+        message(crayon::yellow(
+            crayon::bold(
+                clisymbols::symbol$ellipsis,
+                'Pulling container from docker hub'
+            )
+        ))
+        docker_env$image$pull('wilsontom/lexmapr-docker')
+    }
+    return(invisible(NULL))
+}

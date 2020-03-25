@@ -10,6 +10,8 @@
 
 FoodOnMatch <- function(food_terms, onto_terms)
 {
+    check_image()
+
     # create temp-dir
     options(TEMPDIR = uuid::UUIDgenerate())
     dir.create(getOption('TEMPDIR'))
