@@ -1,6 +1,6 @@
 # lexmapR
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![Build Status](https://travis-ci.org/wilsontom/lexmapR.svg?branch=master)](https://travis-ci.org/wilsontom/lexmapR) [![Build status](https://ci.appveyor.com/api/projects/status/ap6ks2torlgf2nnk/branch/master?svg=true)](https://ci.appveyor.com/project/wilsontom/lexmapr/branch/master) ![License](https://img.shields.io/badge/license-GNU%20GPL%20v3.0-blue.svg "GNU GPL v3.0")
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable) [![R build status](https://github.com/wilsontom/lexmapR/workflows/R-CMD-check/badge.svg)](https://github.com/wilsontom/lexmapR/actions) ![License](https://img.shields.io/badge/license-GNU%20GPL%20v3.0-blue.svg "GNU GPL v3.0")
 
 
 **R Interface to LexMapr (via docker)**
