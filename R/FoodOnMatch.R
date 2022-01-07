@@ -3,8 +3,8 @@
 #' Match food terms to the FoodOn Ontology
 #'
 #' @param food_terms a vector of food terms to classify
-#' @param onto_terms a vecor of OBO ontology terms to be included in the mapping (ie, `BFO_0000001`)
-#' @return a `tibble` of food term ontoloyy mappings and third-party classifications
+#' @param onto_terms a vector of OBO ontology terms to be included in the mapping (ie, `BFO_0000001`)
+#' @return a `tibble` of food term ontology mappings and third-party classifications
 #'
 #' @export
 

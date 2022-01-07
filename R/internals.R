@@ -2,7 +2,7 @@
 #'
 #' Create a `config.json` file and output to the temporary directory
 #'
-#' @param onto_terms a character string of the IRI prefixes to use for mapping (ie, FOODON:00001283, BFO_0000001)
+#' @param onto_terms a character string of the IRI prefixes to use for mapping (ie, FOODON_00001283, BFO_0000001)
 #' @keywords internal
 
 create_config <- function(onto_terms)
