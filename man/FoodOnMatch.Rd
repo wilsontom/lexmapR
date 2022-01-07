@@ -9,10 +9,10 @@ FoodOnMatch(food_terms, onto_terms)
 \arguments{
 \item{food_terms}{a vector of food terms to classify}
 
-\item{onto_terms}{a vecor of OBO ontology terms to be included in the mapping (ie, `BFO_0000001`)}
+\item{onto_terms}{a vector of OBO ontology terms to be included in the mapping (ie, `BFO_0000001`)}
 }
 \value{
-a `tibble` of food term ontoloyy mappings and third-party classifications
+a `tibble` of food term ontology mappings and third-party classifications
 }
 \description{
 Match food terms to the FoodOn Ontology

@@ -7,7 +7,7 @@
 create_config(onto_terms)
 }
 \arguments{
-\item{onto_terms}{a character string of the IRI prefixes to use for mapping (ie, FOODON:00001283, BFO_0000001)}
+\item{onto_terms}{a character string of the IRI prefixes to use for mapping (ie, FOODON_00001283, BFO_0000001)}
 }
 \description{
 Create a `config.json` file and output to the temporary directory
